@@ -1,0 +1,122 @@
+20 perguntas sobre orientacao a objetos no Sistema Academico
+
+Projeto: Sistema Academico
+
+1. O que e uma classe e quais classes foram criadas neste projeto?
+R:ma classe é um modelo que define atributos e métodos para criar objetos.
+No projeto foram criadas as classes:
+Pessoa
+Aluno
+Professor
+Disciplina
+SistemaAcademico
+
+2. O que e um objeto e quais objetos sao instanciados na funcao main de Sistema_academico.py?
+R:Na função main de Sistema_academico.py são instanciados objetos como:
+
+alunos
+professores
+disciplinas
+o sistema acadêmico
+
+Exemplo:
+
+objeto da classe Aluno
+objeto da classe Professor
+objeto da classe Disciplina
+
+3. Qual e a responsabilidade da classe Pessoa dentro do projeto?
+R:A responsabilidade da classe Pessoa é servir como classe base para representar informações comuns entre pessoas do sistema, como:
+nome
+idade
+CPF
+Ela evita repetição de código.
+
+4. Por que Aluno e Professor herdam da classe Pessoa?
+R:Aluno e Professor herdam da classe Pessoa porque ambos possuem características em comum.
+A herança permite reutilizar atributos e métodos já existentes em Pessoa.
+
+5. Quais atributos a classe Aluno recebe diretamente da classe Pessoa?
+R:A classe Aluno recebe diretamente da classe Pessoa atributos como:
+nome
+idade
+CPF
+
+6. Quais atributos sao especificos da classe Aluno?
+R:Os atributos específicos da classe Aluno são os relacionados ao estudante, como:
+matrícula
+lista de disciplinas
+
+7. Quais atributos sao especificos da classe Professor?
+R:Os atributos específicos da classe Professor são os relacionados ao professor, como:
+área de atuação
+disciplinas ministradas
+
+8. Qual e a responsabilidade da classe Disciplina no sistema?
+R:A responsabilidade da classe Disciplina é representar uma matéria do sistema acadêmico.
+Ela controla:
+nome da disciplina
+professor responsável
+lista de alunos matriculados
+
+9. Como o metodo super() e utilizado nos construtores de Aluno e Professor?
+R:O método super() é utilizado nos construtores de Aluno e Professor para chamar o construtor da classe Pessoa.
+Exemplo de funcionamento:
+super().__init__(nome, idade, cpf)
+Assim os atributos herdados são inicializados corretamente.
+
+10. O que o metodo __init__ faz em cada classe do projeto?
+R:O método __init__ é o construtor da classe.
+Ele serve para inicializar os atributos dos objetos quando eles são criados.
+Cada classe usa o __init__ para definir seus próprios dados.
+
+11. O que o metodo __str__ permite fazer ao imprimir objetos como Aluno, Professor e Disciplina?
+R:O método __str__ permite mostrar informações formatadas do objeto ao usar print().
+Exemplo:
+print(aluno)
+Em vez de aparecer um endereço de memória, aparecem dados organizados do aluno, professor ou disciplina.
+
+12. Como acontece a associacao entre um aluno e uma disciplina?
+R:A associação entre um aluno e uma disciplina acontece quando o aluno é matriculado na disciplina.
+O aluno passa a fazer parte da lista de alunos da disciplina.
+
+13. Como acontece a associacao entre um professor e uma disciplina?
+R:A associação entre professor e disciplina acontece quando um professor é definido como responsável pela disciplina.
+
+14. Por que a classe Disciplina possui uma lista de alunos?
+R:A classe Disciplina possui uma lista de alunos porque uma disciplina pode ter vários estudantes matriculados.
+
+15. Por que a classe Aluno possui uma lista de disciplinas?
+R:A classe Aluno possui uma lista de disciplinas porque um aluno pode cursar várias matérias.
+
+16. Como o metodo matricular_aluno ajuda a manter a relacao entre aluno e disciplina?
+R:O método matricular_aluno ajuda a manter a relação entre aluno e disciplina adicionando:
+o aluno na lista da disciplina
+a disciplina na lista do aluno
+Assim a associação fica organizada nos dois lados.
+
+17. Como o metodo definir_professor ajuda a manter a relacao entre professor e disciplina?
+R:O método definir_professor ajuda a manter a relação entre professor e disciplina associando o professor responsável à disciplina.
+
+18. O que o metodo remover_dados da classe Aluno faz e quais atributos ele modifica?
+R:O método remover_dados da classe Aluno remove ou limpa informações do aluno.
+Ele modifica atributos relacionados aos dados acadêmicos do aluno, como:
+disciplinas
+matrícula
+outros dados definidos no método
+
+19. Qual e a responsabilidade da classe SistemaAcademico em relacao as outras classes?
+R:A classe SistemaAcademico é responsável por controlar o funcionamento geral do sistema.
+Ela organiza:
+cadastro de alunos
+cadastro de professores
+cadastro de disciplinas
+relacionamentos entre os objetos
+
+20. Como os conceitos de classe, objeto, heranca, encapsulamento e associacao aparecem no projeto?
+R:Os conceitos aparecem no projeto da seguinte forma:
+Classe: estruturas como Aluno, Professor e Disciplina.
+Objeto: instâncias criadas na função main.
+Herança: Aluno e Professor herdando de Pessoa.
+Encapsulamento: organização dos atributos e métodos dentro das classes.
+Associação: relacionamento entre alunos, professores e disciplinas.
