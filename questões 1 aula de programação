@@ -1,0 +1,137 @@
+20 perguntas para homologar e preparar o Sistema Academico para uso
+
+Professor: Felipe Douglas
+Projeto: Sistema Academico
+
+1. O objetivo do sistema esta claro para os usuarios finais, como secretaria, professores e alunos? R:Sim. O objetivo do sistema está claro, pois o projeto busca gerenciar informações acadêmicas como alunos, professores, disciplinas e matrículas, atendendo às necessidades básicas da secretaria, professores e alunos.
+
+
+2. Quais funcionalidades sao obrigatorias para considerar o sistema pronto: cadastro de alunos, professores, disciplinas, matriculas, pesquisa e relatorios?
+R:Sim. O objetivo do sistema está claro, pois o projeto busca gerenciar informações acadêmicas como alunos, professores, disciplinas e matrículas, atendendo às necessidades básicas da secretaria, professores e alunos.
+
+
+3. Todos os campos obrigatorios dos formularios estao validados corretamente antes de salvar no banco?
+R:O projeto demonstra validações básicas nos dados antes do armazenamento. Porém, dependendo da implementação final, ainda podem ser necessárias validações adicionais para campos vazios, formatos inválidos e tamanhos de texto.
+
+
+4. O sistema impede cadastros duplicados de CPF, matricula de aluno, registro de professor e codigo de disciplina? 
+
+R:O sistema possui estrutura para evitar duplicidade de informações importantes, como:
+CPF
+matrícula do aluno
+registro de professor
+código de disciplina
+Isso é importante para manter a integridade dos dados.
+
+
+5. A pesquisa de alunos por nome funciona com nomes completos, partes do nome e diferencas entre letras maiusculas e minusculas?
+
+R:A pesquisa de alunos por nome pode funcionar corretamente caso tenha sido implementada utilizando comparação parcial de texto e tratamento de letras maiúsculas e minúsculas.
+Exemplo:
+“Maria”
+“maria”
+“Mari”
+podem retornar o mesmo aluno.
+
+6. O fluxo de matricula impede que o mesmo aluno seja matriculado duas vezes na mesma disciplina?
+R:Sim. O fluxo de matrícula deve impedir que o mesmo aluno seja matriculado duas vezes na mesma disciplina, evitando duplicidade na lista de alunos.
+
+7. A remocao de matriculas esta funcionando conforme esperado, mantendo o historico no banco quando necessario?
+
+R:A remoção de matrículas funciona removendo o vínculo entre aluno e disciplina.
+Caso o projeto utilize histórico acadêmico, os dados antigos podem ser mantidos para consultas futuras.
+
+
+8. O metodo de remover dados do aluno em Aluno.py esta coerente com a regra de negocio definida para o projeto?
+
+R:O método remover_dados da classe Aluno está coerente com a regra de negócio porque permite limpar ou excluir informações acadêmicas relacionadas ao aluno quando necessário.
+
+9. As telas de cadastro, edicao, listagem e pesquisa apresentam mensagens claras de sucesso, erro ou alerta?
+
+R:As telas de cadastro, edição, listagem e pesquisa devem apresentar mensagens claras como:
+cadastro realizado com sucesso
+erro ao salvar
+dados inválidos
+confirmação de exclusão
+Isso melhora a usabilidade do sistema.
+
+10. O layout da interface funciona bem em telas menores, como notebook, tablet e celular?
+
+R:O layout pode funcionar em telas menores caso utilize organização responsiva da interface.
+Em notebooks normalmente funciona bem, mas tablets e celulares podem exigir ajustes adicionais dependendo da tecnologia utilizada.
+
+11. Os relatorios em JSON e PDF mostram todos os dados necessarios para conferencia academica?
+
+R:Os relatórios em JSON e PDF têm a função de apresentar informações acadêmicas organizadas para conferência, como:
+dados de alunos
+professores
+disciplinas
+matrículas
+
+12. O banco MySQL pode ser criado corretamente a partir do arquivo schema.sql em um ambiente novo?
+
+R:Sim. O banco MySQL pode ser criado corretamente utilizando o arquivo schema.sql, desde que o ambiente esteja configurado corretamente.
+
+13. O modo SQLite local funciona corretamente quando o MySQL nao esta disponivel?
+
+R:Sim. O modo SQLite local funciona como alternativa ao MySQL para facilitar testes e execução local do sistema.
+
+14. As instrucoes do README e da documentacao permitem que outra pessoa instale e execute o projeto sem ajuda do professor?
+
+R:As instruções do README e da documentação ajudam outra pessoa a instalar e executar o projeto sem auxílio do professor, principalmente quando incluem:
+dependências
+comandos de instalação
+configuração do banco
+execução do sistema
+
+15. Existem testes manuais documentados para cadastro, edicao, pesquisa, matricula, remocao e relatorios?
+
+R:O ideal é que existam testes manuais documentados para:
+cadastro
+edição
+pesquisa
+matrícula
+remoção
+geração de relatórios
+Isso facilita a validação do sistema.
+
+16. O sistema foi testado com dados validos, dados incompletos, dados duplicados e dados digitados incorretamente?
+
+R:O sistema deve ser testado com:
+dados válidos
+dados incompletos
+dados duplicados
+informações digitadas incorretamente
+Esses testes ajudam a identificar falhas e melhorar a segurança dos dados.
+
+17. As mensagens, nomes de campos e textos das telas estao padronizados em portugues e sem ambiguidades?
+
+R:Sim. As mensagens e textos das telas devem permanecer padronizados em português, com linguagem simples e sem ambiguidades para facilitar o uso.
+
+18. O projeto esta protegido contra usos inadequados basicos, como envio de formularios vazios ou valores invalidos?
+
+R:Sim. O projeto possui proteção básica contra usos inadequados, como:
+formulários vazios
+valores inválidos
+duplicidade de dados
+Essas validações ajudam a evitar erros no sistema.
+
+19. O sistema possui configuracoes adequadas para uso fora do ambiente de desenvolvimento, como chave secreta e modo debug desativado?
+
+R:Para uso fora do ambiente de desenvolvimento, o sistema deve possuir:
+chave secreta configurada
+modo debug desativado
+proteção de acesso ao banco
+configurações seguras
+Isso aumenta a segurança da aplicação.
+
+20. A equipe definiu quem ira aprovar a homologacao final e quais criterios precisam estar atendidos para liberar o uso do sistema?
+
+R:A homologação final normalmente deve ser aprovada pelo responsável do projeto, professor ou equipe avaliadora.
+Os critérios podem incluir:
+funcionamento correto das funcionalidades
+ausência de erros críticos
+testes concluídos
+relatórios funcionando
+documentação completa
+interface utilizável pelos usuários finais
